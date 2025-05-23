@@ -1,11 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cardápio Escolar</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    
+
+  <header>
+    <h1>Cardápio Escolar Gourmet</h1>
+    <p>Selecione pratos nutritivos para a semana</p>
+  </header>
+
+  <main>
+    <form id="formPrato" class="form-card">
+      <h2>Adicionar Prato</h2>
+      <label for="nomePrato">Nome do prato:</label>
+      <input type="text" id="nomePrato" required placeholder="Ex: Arroz com feijão" />
+
+      <label for="ingredientes">Ingredientes (separados por vírgula):</label>
+      <input type="text" id="ingredientes" required placeholder="Ex: Arroz, feijão, alho, óleo" />
+
+      <label for="calorias">Calorias totais:</label>
+      <input type="number" id="calorias" min="0" required placeholder="Ex: 350" />
+
+      <button type="submit">Adicionar prato</button>
+    </form>
+
+    <section>
+      <h2>Pratos Cadastrados</h2>
+      <div id="listaPratos" class="card-list"></div>
+    </section>
+
+    <section>
+      <h2>Refeições Saudáveis (menos de 400 calorias)</h2>
+      <div id="listaSaudaveis" class="card-list"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Cardápio Escolar Gourmet</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
